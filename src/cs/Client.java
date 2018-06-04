@@ -82,8 +82,6 @@ public class Client {
 			if (instructions.length < 3) {
 				System.out.println("Invalid command or arguments. Please try again");
 			} else {
-				// setUser(user,instructions);
-				// setCommand(command,user, instructions);
 				user = new User(instructions[1], clientDataInputStream, clientDataOutputStream);
 				command = new Command(user, instructions[0], instructions[1], instructions[2]);
 				Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
