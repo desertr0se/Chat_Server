@@ -26,8 +26,6 @@ public class ClientHandler extends Thread {
 
 	private static final Logger LOGGER = Logger.getLogger(ClientHandler.class.getName());
 	private Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
-//	private DataInputStream dis = null;
-//	private DataOutputStream dos = null;
 	private Socket serverSocket;
 	private Map<String, User> activeUsers;
 	private Map<String, String> allUsers;
@@ -37,8 +35,6 @@ public class ClientHandler extends Thread {
 
 	public ClientHandler(Socket s, Map<String, User> activeUsers, Map<String, String> allUsers,
 			Map<String, ChatRoom> chatRooms) throws IOException {
-//		this.dis = new DataInputStream(s.getInputStream());
-//		this.dos = new DataOutputStream(s.getOutputStream());
 		this.serverSocket = s;
 		this.activeUsers = activeUsers;
 		this.allUsers = allUsers;
